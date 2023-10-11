@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Electricity Bill</title>
+  <meta charset="utf-8"/>
+ </head>
+ <body>
+  <form>
+   <table>
+   <tr>
+    <th colspan=2>Electricty Bill</th>
+   </tr>
+   <tr>
+    <td>Consumer Number</td>
+	<td ><input type="number" id="t1" required/>
+	</td>
+   </tr>
+   <tr>
+    <td>Previous Reading:</td>
+	<td><input type="number" id="t2" required/>
+	</td>
+   </tr>
+   <tr>
+    <td>Present Reading:</td>
+	<td><input type="number" id="t3" required/></td>
+   </tr>
+  <tr>
+   <td colspan=2><input type="button" value="submit" onclick="unit()"/>
+   </td>
+  </tr>
+  <tr>
+   <td>units consumed:</td>
+   <td><p id="p1"></p></td>
+  </tr>
+  <tr>
+   <td>Amount:</td>
+   <td><p id="p2"></p></td>
+   </tr>
+  </table>
+ </form>
+<script type="text/javascript">
+function unit()
+{
+alert("H");
+var x=parseInt(document.getElementById('t2').value);
+alert(x);
+var y=parseInt(document.getElementById('t3').value);
+alert(y);
+var z=y-x;
+document.getElementById('p1').innerHTML=z;
+alert(z);
+var amt;
+if(z<100)
+amt=z*3;
+else if(z>100 && z<=300)
+amt=z*4;
+else if(z>300 && z<=500)
+amtz*5;
+else if(z>500)
+amt=z*7;
+alert(amt);
+document.getElementById('p2').innerHTML=amt;
+}
+</script>
+</body>
+</html>
